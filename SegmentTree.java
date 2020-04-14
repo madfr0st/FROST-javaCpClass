@@ -33,7 +33,7 @@ public class SegmentTree {
 
     public int[] createTree(int[] input, Operation operation){
         int height = (int)Math.ceil(Math.log(input.length)/Math.log(2));
-        int segmentTree[] = new int[(int)(Math.pow(2, height+1)-1)];
+        int[] segmentTree = new int[(int)(Math.pow(2, height+1)-1)];
         createTreeUtil(segmentTree,input,0,input.length-1,0, operation);
         return segmentTree;
     }
@@ -73,6 +73,7 @@ public class SegmentTree {
      * Updates segment tree for certain index by given delta
      */
     public void deltaUpdateSegmentTree(int[] input, int[] segmentTree, int index, int delta, Operation operation){
+        index--;
         input[index] += delta;
         deltaUpdateSegmentTreeUtil(segmentTree, index, delta, 0, input.length - 1, 0, operation);
     }
@@ -102,6 +103,7 @@ public class SegmentTree {
      * Updates segment tree for certain index by given Value
      */
     public void valueUpdateSegmentTree(int[] input, int[] segmentTree, int index, int value, Operation operation){
+        index--;
         input[index] = value;
         valueUpdateSegmentTreeUtil(segmentTree, index, value, 0, input.length - 1, 0, operation);
     }
