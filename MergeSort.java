@@ -1,8 +1,8 @@
 package imp;
 
-public class MergeSort{
+public class MergeSort<U>{
 
-    static void merge(int[] arr, int left, int middle, int right) {
+    private static void merge(int[] arr, int left, int middle, int right) {
 
         int size1 = middle - left + 1;
         int size2 = right - middle;
@@ -75,7 +75,7 @@ public class MergeSort{
         }
     }
 
-    static void merge(long[] arr, int left, int middle, int right) {
+    private static void merge(long[] arr, int left, int middle, int right) {
 
         int size1 = middle - left + 1;
         int size2 = right - middle;
