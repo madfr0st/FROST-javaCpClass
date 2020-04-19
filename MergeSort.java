@@ -1,6 +1,6 @@
 package imp;
 
-public class MergeSort<U>{
+public class MergeSort{
 
     private static void merge(int[] arr, int left, int middle, int right) {
 
