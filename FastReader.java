@@ -1,9 +1,7 @@
 package imp;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class FastReader {
 
@@ -11,8 +9,7 @@ public class FastReader {
         StringTokenizer st;
 
         public FastReader() {
-            inp = new BufferedReader(new
-                    InputStreamReader(System.in));
+            inp = new BufferedReader(new InputStreamReader(System.in));
         }
 
         String next() {
@@ -30,31 +27,26 @@ public class FastReader {
         int nextInt() {
             return Integer.parseInt(next());
         }
-
         long nextLong() {
             return Long.parseLong(next());
         }
-
         double nextDouble() {
             return Double.parseDouble(next());
         }
 
         String nextLine() {
             String str = "";
-            try
-            {
+            try {
                 str = inp.readLine();
             }
-            catch (IOException e)
-            {
+            catch (IOException e) {
                 e.printStackTrace();
             }
             return str;
         }
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         FastReader s=new FastReader();
         int n = s.nextInt();
         int k = s.nextInt();

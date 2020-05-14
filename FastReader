@@ -34,12 +34,10 @@ static class FastReader {
 
     String nextLine() {
         String str = "";
-        try
-        {
+        try{
             str = inp.readLine();
         }
-        catch (IOException e)
-        {
+        catch (IOException e){
             e.printStackTrace();
         }
         return str;
